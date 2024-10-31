@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demostración de Bootstrap</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Mi Sitio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active"><a class="nav-link" href="#">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+   
+    <div class="accordion my-4" id="accordionExample">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">Sección 1</button>
+                </h5>
+            </div>
+            <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
+                <div class="card-body">Contenido de la primera sección.</div>
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="my-3 text-center">
+        <button type="button" class="btn btn-primary">Botón Principal</button>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-secondary">Opción 1</button>
+            <button type="button" class="btn btn-secondary">Opción 2</button>
+            <button type="button" class="btn btn-secondary">Opción 3</button>
+        </div>
+    </div>
+
+ 
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Abrir Modal</button>
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">Título del Modal</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">Contenido del modal.</div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="my-3">
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 50%;">50%</div>
+        </div>
+        <div class="spinner-border text-primary mt-3" role="status">
+            <span class="sr-only">Cargando...</span>
+        </div>
+    </div>
+
+    
+    <div class="form-group">
+        <label for="inputFloating">Nombre</label>
+        <input type="text" class="form-control" id="inputFloating" placeholder="Nombre completo">
+    </div>
+
+   
+    <button type="button" class="btn btn-secondary" onclick="$('.toast').toast('show')">Mostrar Toast</button>
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000">
+        <div class="toast-header">
+            <strong class="mr-auto">Notificación</strong>
+            <small>Hace 2 segundos</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+        </div>
+        <div class="toast-body">Este es un mensaje de ejemplo.</div>
+    </div>
+
+    
+    <footer class="bg-dark text-white text-center py-3 fixed-bottom">
+        &copy; 2024 Mi Sitio - Todos los derechos reservados.
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

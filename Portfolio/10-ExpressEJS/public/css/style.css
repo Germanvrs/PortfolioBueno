@@ -5,4 +5,16 @@ html {
 
 body {
     background-color: beige !important;
+    font-family: Arial, sans-serif;
+}
+
+header img {
+    max-width: 100px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
 }

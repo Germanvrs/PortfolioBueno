@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Bienvenido!</h1>
+    <h2>Introduce tu nombre</h2>
+    <form action="/greet" method="GET">
+        <input type="text" name="name" required>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        const names = <%- JSON.stringify(names) %>;
+        if (names.length > 0) {
+            const message = `Hola, ${names[names.length - 1]}!`;
+            document.write(`<p>${message}</p>`);
+        }
+    </script>
+
+    <h2>Lista de Nombres</h2>
+    <ul>
+        <% if (names.length > 0) { %>
+            <% names.forEach((name, index) => { %>
+                <li>
+                    <a href="/greet/<%= index %>"><%= name %></a>
+                </li>
+            <% }) %>
+        <% } else { %>
+            <li>No hay nombres introducidos.</li>
+        <% } %>
+    </ul>
+
+    <h2>TODO List</h2>
+    <form action="/task" method="POST">
+        <input type="text" name="task" required>
+        <button type="submit">Añadir</button>
+    </form>
+    <ul>
+        <% tasks.forEach((task, index) => { %>
+            <li>
+                <%= task %>
+                <form action="/task/<%= index %>/delete" method="POST" style="display:inline;">
+                    <button type="submit">Eliminar</button>
+                </form>
+                <form action="/task/<%= index %>/up" method="POST" style="display:inline;">
+                    <button type="submit">↑</button>
+                </form>
+                <form action="/task/<%= index %>/down" method="POST" style="display:inline;">
+                    <button type="submit">↓</button>
+                </form>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
+
+</body>
+</html>

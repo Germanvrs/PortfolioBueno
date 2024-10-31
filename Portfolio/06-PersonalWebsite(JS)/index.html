@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Website - CSS</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  
+    <h1>Agenda Personal</h1>
+    <form id="scheduleForm">
+        <input type="text" id="task" placeholder="Tarea" required>
+        <input type="date" id="date" required>
+        <input type="time" id="time" required>
+        <button type="button" id="addBtn" onclick="addToSchedule()">Agregar a la Agenda</button>
+    </form>
+
+    <table id="scheduleTable">
+        <thead>
+            <tr>
+                <th>Tarea</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script src="js/server.js"></script>
 </body>
 </html>
