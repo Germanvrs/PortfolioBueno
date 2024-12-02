@@ -1,0 +1,20 @@
+<%- include("partials/header") %>
+
+<h1>Hola, <%= name %>!</h1>
+
+<h2>Posts</h2>
+
+<ul>
+  <% posts.forEach((post, index) => { %>
+    <li>
+      <strong><%= post.title %></strong> - <%= post.content.substring(0, 100) %>...
+      <a href="/post/<%= index %>">Leer más</a>
+    </li>
+  <% }); %>
+</ul>
+
+<form action="/post" method="POST">
+  <input type="text" name="title" placeholder="Título" required>
+  <textarea name="content" placeholder="Contenido" required></textarea>
+  <button type="submit">Publicar</button>
+</form>
